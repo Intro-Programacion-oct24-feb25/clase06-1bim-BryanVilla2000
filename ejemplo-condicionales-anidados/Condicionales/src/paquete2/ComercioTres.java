@@ -58,9 +58,50 @@ public class ComercioTres {
         System.out.println("Ingrese el procentaje del descuento del seguro");
         porcentajeSeguro = entrada.nextInt();
         
-        if (porcentajeSeguro > 15  ) {
+          // opción 1
+          /*
+          Esta opcion funciona  ya que si ingresa numeros mayores a 15 y menores
+          a 1 el valor asignado a porcentajeSeguro le da un valor de 10
+          */
+        /*if (porcentajeSeguro >= 1 && porcentajeSeguro <= 15) {
+            porcentajeSeguro = porcentajeSeguro + 0;
+        } else {
             porcentajeSeguro = 10;
-        } 
+        }*/
+
+        // opción 2
+        /*
+        Esta solucion solo funciona para números mayores a 15 pero en el caso 
+        que ingrese un valor menor a 1 deberia darle un valor de 10 a porcentajeSeguro
+        pero con esta solucion no le da ese valor
+        */
+        //if (porcentajeSeguro > 15) {
+        //    porcentajeSeguro = 10;
+        //}
+
+         // opción 3
+         /*
+         Esta opcion funciona  ya que si ingresa numeros mayores a 15 y menores
+         a 1 el valor asignado a porcentajeSeguro le da un valor de 10
+          
+         */
+         
+        if (porcentajeSeguro < 1 || porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+
+        // opción 4
+        /*
+         esta opcion no funciona ya que al dar un numero menor a 1 funcionaria 
+        la de porcentaje < 1 seria verdadera pero la otra seria falsa y para que
+        se ejecute este if ambos deben ser verdaderas
+        */
+        /*if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
+          //  porcentajeSeguro = 10;
+        }
+    */
+        
+        System.out.println(porcentajeSeguro);
 
         // calcular la productividad
         productividad = numeroProductos * coeficiente;

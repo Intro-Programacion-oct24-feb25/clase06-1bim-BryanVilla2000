@@ -16,6 +16,7 @@ public class Ejemplo02 {
         
         pais = "Ecuador";
         //      0123456
+        // el charAt es para obtener un solo caracter de una cadena 
         char letra = pais.charAt(0);
         System.out.printf("%s\n", letra);
         
