@@ -78,6 +78,6 @@ public class Ejemplo021 {
                 System.out.println("opcion inncorrecta");
         }
         System.out.printf("Usted a nacido el %d de %s de %d\n", diaNacimiento,
-                 mesCadena, yearNacimiento);
+                 mesCadena.toUpperCase(), yearNacimiento);
     }
 }
